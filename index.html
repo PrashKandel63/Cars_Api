@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search Cars</title>
+</head>
+
+<body>
+    <form action=" " method="get">
+        <input id="search" type="text" placeholder="Search for a car">
+        <input type="Submit" class="button">
+    </form>
+    <div id="jsonData"></div>
+    <script>
+        fetch("Exercise_Dataset.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                appendData(data);
+            })
+            .catch(function(err) {
+                console.log("error: " + err);
+            });
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("jsonData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Name: ' + data[i].model;
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+</body>
+
+</html>
