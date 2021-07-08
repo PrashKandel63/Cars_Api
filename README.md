@@ -2,6 +2,8 @@
 
 npm install node-modules
 
+npm install express
+
 nmp start
 
 Node.js is requred to run this.
