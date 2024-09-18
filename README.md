@@ -1,6 +1,6 @@
 # cars
 
-Click the link at the top of the reop to view:
+Click the link at the top of the repo to view:
 cars-api-tau.vercel.app
 
 Run the API:
